@@ -4,7 +4,7 @@ class Particle {
             restitution: 1,
             friction: 5,
             density: 1,
-            isStatic:true
+            //isStatic:true
         }
         this.r = 10;
         this.body = Bodies.circle(x, y, this.r, options);
@@ -20,9 +20,9 @@ class Particle {
         push();
         translate(pos.x, pos.y);
         rotate(angle);
-        imageMode(CENTER);
-        noStroke();
-        fill(0,255);
+        //imageMode(CENTER);
+        //noStroke();
+        fill(255);
         ellipseMode(RADIUS);
         ellipse(0,0,this.r,this.r);
         pop();
