@@ -44,9 +44,7 @@ function setup() {
   }
 
   //create particle objects
-  if (frameCount%60===0){
-    particles.push(new Particle(random(width/2-10, width/2+10),10));
-  }
+  
   
 }
  
@@ -68,7 +66,10 @@ function draw() {
   for (var k = 0; k < divisions.length; k++) {
     divisions[k].display();
   }
-
+  if (frameCount%60===0){
+    console.log(frameCount);
+    particles.push(new Particle(random(width/2-10, width/2+10),10));
+  }
   //display the paricles 
   for (var j = 0; j < particles.length; j++) {
     particles[j].display();
